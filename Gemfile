@@ -30,6 +30,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', '~> 3.0'
 # Soft delete
 gem 'paranoia', '~> 2.2'
+# Object-based searching.
+gem 'ransack'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -67,6 +69,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
