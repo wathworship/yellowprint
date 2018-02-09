@@ -52,7 +52,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :warn
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -91,4 +91,30 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.smtp_settings = {
+    address: ENV['EMAIL_PROVIDER_HOST'],
+    port: ENV['EMAIL_PROVIDER_PORT'],
+    domain: ENV['DOMAIN_NAME'],
+    authentication: "PLAIN",
+    enable_starttls_auto: true,
+    user_name: ENV['EMAIL_PROVIDER_USERNAME'],
+    password: ENV['EMAIL_PROVIDER_PASSWORD']
+  }
+  # ActionMailer Config
+  # config.action_mailer.default_url_options = { :host => 'bananacoding.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  # Send email in development mode?
+  config.action_mailer.perform_deliveries = true
+
+  # Email error notification template
+  Rails.application.config.middleware.use ExceptionNotification::Rack,
+    :email => {
+    :email_prefix => "[ERROR] ",
+    :sender_address => ENV['EMAIL_SENDER_ADDRESS'],
+    :exception_recipients => ENV['EXCEPTION_RECIPIENTS'].split(','),
+    :delivery_method => :smtp,
+    :smtp_settings => config.action_mailer.smtp_settings
+  }  
 end

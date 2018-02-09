@@ -3,6 +3,31 @@
 # stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
 spec_js_retry: "3"
 rails_admin_path: admin
-#
-# production:
-#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+
+development:
+  # Database information
+  DB_HOST: "localhost"
+  DB_PORT: "5432"
+  DB_USERNAME: "postgres"
+  DB_PASSWORD: "password"
+
+
+production:
+  stripe_api_key: "sk_live_EeHnL644i6zo4Iyq4v1KdV9H"
+  SECRET_KEY_BASE: "dd2b8e104da10062f445372de5300511856df3b8bb9c148f296e94a24dfec3906cdfcf5a8a93754d5d08fc4c4170c7735a4b3962bb04819d26e026ef9a2ecb56"
+
+  # Email Error Notification Information
+  EMAIL_PROVIDER_HOST: "smtp.sendgrid.net"
+  EMAIL_PROVIDER_PORT: "587"
+  EMAIL_PROVIDER_USERNAME: "apikey"
+  EMAIL_PROVIDER_PASSWORD: "password"
+  EMAIL_SENDER_ADDRESS: "'Yellowprint Notifier' <no-reply@bananacoding.com>"
+  # Email Receiver
+  EXCEPTION_RECIPIENTS: "hello@bananacoding.com,"
+  DOMAIN_NAME: "localhost"
+  
+  # Database information
+  DB_HOST: "localhost"
+  DB_PORT: "5432"
+  DB_USERNAME: "postgres"
+  DB_PASSWORD: "password"
