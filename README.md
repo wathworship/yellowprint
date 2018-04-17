@@ -8,7 +8,7 @@ Ruby on Rails + Angular code template for Banana Coding
 2. Open Terminal
 3. Create a bare clone of the repository.
 ```
-git clone --bare git@github.com:BananaCoding/yellowprint.git
+git clone --bare git@github.com:BananaCoding/yellowprint
 ```
 4. Mirror-push to the new repository.
 ```
