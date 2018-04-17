@@ -12,14 +12,14 @@ git clone --bare git@github.com:BananaCoding/yellowprint
 ```
 4. Mirror-push to the new repository.
 ```
-cd yellowprint
+cd yellowprint.git
 git push --mirror git@github.com:BananaCoding/new-repository.git
 ```
 Where `new-repository` is the name of your new github repo.
 5. Remove template folder from your local machine.
 ```
 cd ..
-rm -rf yellowprint
+rm -rf yellowprint.git
 ```
 6. Clone new repo to your local machine.
 ```
