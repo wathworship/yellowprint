@@ -38,6 +38,7 @@ rbenv install 2.5.0
 rbenv global 2.5.0
 ```
 - nodejs `brew install node`
+- yarn `brew install yarn`
 
 ### Setup project
 
@@ -45,9 +46,10 @@ rbenv global 2.5.0
 
 1. create `config/application.yml` you can copy sample file from  `config/application.sample.yml`
 2. create `config/database.yml` you can copy sample file from  `config/database.sample.yml`
-3. run `bundle install`
-4. run `rake db:setup` to setup database
-5. start server with `rails s` command
+3. run `yarn install`
+4. run `bundle install`
+5. run `rake db:setup` to setup database
+6. start server with `rails s` command
 
 ##### Figaro: environment variables (ENV)
 We're using Figaro as a Rails app configuration, so please create your own 'config/application.yml' by running
