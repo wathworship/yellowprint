@@ -76,5 +76,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# javascript translate using I18n.t("...") on javascript
+# javascript translate
 gem "i18n-js"
