@@ -9,13 +9,14 @@ import { UserService } from '../user/user.service';
 export class FirstComponent {
   user: any;
   users: any[];
-  hello = I18n.t("hello")
+  hello: string;
   usersColumns: any[] = [
     { prop: 'email' },
     { prop: 'role' }
   ];
 
   constructor(private userService: UserService) {
+    this.hello = I18n.t("hello");
     this.userService.all().subscribe((users: any[]) => {
       this.users = users;
     });
