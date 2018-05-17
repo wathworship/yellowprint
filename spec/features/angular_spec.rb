@@ -13,7 +13,7 @@ describe 'angular', js: true do
   end
 
   it 'open first page' do
-    expect(page).to have_content "Hello #{normal_user.email}"
+    expect(page).to have_content "Hi #{normal_user.email}"
   end
 
   it 'can go to second page' do
