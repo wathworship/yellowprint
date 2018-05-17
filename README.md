@@ -89,9 +89,8 @@ Following are required variables
 
 You can enable rails admin by adding `rails_admin_path` variable into your application.yml file
 
-### Javascript Translate (i18n-js)
+### Translation
 
-You can add a language at `_translates.html.erb` add `(<%= YAML.load_file(File.open("config/locales/[LANGUAGE].yml")).to_json.html_safe %>)` 
-and `config/locales/[LANGUAGE].yml`
+We are using i18n and i18n-js together, which means you can use ruby I18n translation on client side like this javascript code
 
-javascript translate using `I18n.t("KEY")` on javascript
+```I18n.t("KEY")```
