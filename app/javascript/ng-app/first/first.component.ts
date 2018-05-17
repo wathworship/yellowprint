@@ -9,6 +9,7 @@ import { UserService } from '../user/user.service';
 export class FirstComponent {
   user: any;
   users: any[];
+  hello = I18n.t("hello")
   usersColumns: any[] = [
     { prop: 'email' },
     { prop: 'role' }
