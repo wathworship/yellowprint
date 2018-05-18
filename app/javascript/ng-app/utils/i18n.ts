@@ -12,7 +12,6 @@ export class I18n {
     this.locale = window.locale;
 
     var lang;
-    var selectedTranslatesSet;
 
     if(this.locale) {
       lang = this.locale;
@@ -22,7 +21,7 @@ export class I18n {
       lang = 'en';
     }
     try {
-      selectedTranslatesSet = this.translates[lang];
+      var selectedTranslatesSet = this.translates[lang];
       return this.deepDown(selectedTranslatesSet, key);
     } catch {
       throw 'Cannot translate ' + key;
