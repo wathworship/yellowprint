@@ -11,7 +11,7 @@ pipeline:
     commands:
       - cp -f config/database.drone.yml config/database.yml
       - cp -f config/application.sample.yml config/application.yml
-      - gem install bundler
+      - gem install bundler -v 1.16.1
       - bundle install --path=./bundler
       - yarn install
       - rake db:create
