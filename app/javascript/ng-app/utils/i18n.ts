@@ -1,5 +1,5 @@
 export class I18n {
-  translate: any;
+  translates: any;
   defaultLocale: string;
   locale: string;
 
@@ -7,9 +7,9 @@ export class I18n {
   }
 
   t(key: string) {
-    this.translates = window.translates;
-    this.defaultLocale = window.defaultLocale;
-    this.locale = window.locale;
+    this.translates = window['translates'];
+    this.defaultLocale = window['defaultLocale'];
+    this.locale = window['locale'];
 
     var lang;
 
