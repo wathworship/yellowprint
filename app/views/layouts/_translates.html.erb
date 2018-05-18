@@ -1,0 +1,5 @@
+<script type="text/javascript">
+  window.translates = <%= YAML.load_file(File.open("config/locales/en.yml")).to_json.html_safe %>;
+  window.defaultLocale = "<%= I18n.default_locale %>";
+  window.locale = "<%= I18n.locale %>";
+</script>
