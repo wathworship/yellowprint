@@ -16,7 +16,7 @@ export class FirstComponent {
   ];
 
   constructor(private userService: UserService) {
-    this.helloLabel = I18n.t("hello");
+    this.hello = I18n.t("hello");
     this.userService.all().subscribe((users: any[]) => {
       this.users = users;
     });
