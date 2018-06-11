@@ -45,8 +45,8 @@ rbenv global 2.5.0
 ##### Dev Machine
 
 1. Mac user have to install Xcode command line tool first
-1.1 xcode-select --install # Install Command Line Tools if you haven't already.
-1.2 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+- xcode-select --install # Install Command Line Tools if you haven't already.
+- sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 2. install yarn https://yarnpkg.com/lang/en/docs/install
 3. install ruby 2.5.0(Windows: https://rubyinstaller.org/, Mac: https://github.com/rbenv/rbenv#homebrew-on-macos)
 4. clone code from YellowPrint repo "git clone git@github.com:BananaCoding/yellowprint.git"
