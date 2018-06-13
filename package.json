@@ -1,6 +1,10 @@
 {
   "name": "blueprint",
   "private": true,
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
   "dependencies": {
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
