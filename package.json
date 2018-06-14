@@ -2,7 +2,7 @@
   "name": "blueprint",
   "private": true,
   "engines": {
-    "node": "8.x",
+    "node": "9.x",
     "npm": "5.x"
   },
   "dependencies": {
