@@ -26,4 +26,13 @@ export class RailsService {
   delete(id, option?) {
     return this.http.delete('/' + this.resources + '/' + id, option);
   }
+
+  save(attrs) {
+    id = attrs.id;
+    if (id) {
+      return update(id, attrs);
+    } else {
+      return create(attrs);
+    }
+  }
 }
